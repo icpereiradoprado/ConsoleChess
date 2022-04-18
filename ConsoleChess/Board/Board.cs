@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleChess.Board
+namespace ConsoleChess.board
 {
     class Board
     {
@@ -17,6 +17,11 @@ namespace ConsoleChess.Board
             Lines = lines;
             Columns = columns;
             Pieces = new Piece[Lines,Columns];
+        }
+        
+        public Piece piece(int line, int column)
+        {
+            return Pieces[line, column];
         }
     }
 }

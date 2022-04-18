@@ -1,5 +1,5 @@
 ﻿using System;
-using ConsoleChess.Board;
+using ConsoleChess.board;
 
 namespace ConsoleChess
 {
@@ -7,8 +7,9 @@ namespace ConsoleChess
     {
         static void Main(string[] args)
         {
-            Position position = new Position(3,4);
-            Console.WriteLine(position);
+            Board board = new Board(8, 8);
+
+            Screen.printBoard(board);
         }
     }
 }
