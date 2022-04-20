@@ -10,6 +10,7 @@ namespace ConsoleChess.board
     {
         public int Lines { get; set; }
         public int Columns { get; set; }
+        
         private Piece[,] Pieces;
 
         public Board(int lines, int columns)
@@ -23,5 +24,12 @@ namespace ConsoleChess.board
         {
             return Pieces[line, column];
         }
+
+        public void putPiece(Piece piece, Position position)
+        {
+            Pieces[position.Line, position.Column] = piece;
+            piece.Position = position;
+        }
+
     }
 }
